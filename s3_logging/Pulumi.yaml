@@ -1,0 +1,6 @@
+name: s3logs
+runtime:
+  name: python
+  options:
+    virtualenv: venv
+description: An AWS S3 Bucket with CloudTrail logging enabled
