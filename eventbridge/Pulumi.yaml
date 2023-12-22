@@ -1,0 +1,6 @@
+name: eventbridge
+runtime:
+  name: python
+  options:
+    virtualenv: venv
+description: EventBridge schedule and rule setup
