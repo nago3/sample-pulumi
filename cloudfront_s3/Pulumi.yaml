@@ -1,0 +1,6 @@
+name: cloudfront_s3
+runtime:
+  name: python
+  options:
+    virtualenv: venv
+description: cloudfront_s3 for frontend and product images
