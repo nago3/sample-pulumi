@@ -12,6 +12,7 @@ def setup_webacl():
     """
     acl = aws.wafv2.WebAcl(f"{env}-webacl",
         scope="CLOUDFRONT",
+        description=f"{env} webacl",
         default_action=aws.wafv2.WebAclDefaultActionArgs(
             allow=aws.wafv2.WebAclDefaultActionAllowArgs()),
         visibility_config=aws.wafv2.WebAclVisibilityConfigArgs(
@@ -24,6 +25,5 @@ def setup_webacl():
 if __name__ == "__main__":
     web_acl = setup_webacl()
 
-    # Export the URLs of the bucket and distribution.
-    pulumi.export("web_acl_arn",
-        pulumi.Output.all(web_acl.arn).apply(lambda args: args[0]))
+    # Export waf webacl ARN
+    pulumi.export("web_acl_arn", web_acl.arn)
