@@ -1,0 +1,6 @@
+name: webacl
+runtime:
+  name: python
+  options:
+    virtualenv: venv
+description: webacl for cloudfront
