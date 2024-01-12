@@ -1,4 +1,4 @@
-name: aws-api-gateway-python
+name: api-gateway-lambda
 runtime:
   name: python
   options:
